@@ -1,39 +1,134 @@
 :root{
-    --page-background: li;
-    --main-color:
+    --page-background: silver;
+    --forestGreen: darkolivegreen;
+    --mainColor: silver;
+    --redBox: 1px solid red;
+    --blueBox: 1px solid blue;
+    --greenBox: 1px solid green;
+    --whiteBox:  1px solid white;
+    --cardWidth: 27%;
+    --cardBorder: 2px dotted white;
 
 }
 
 html{}
+
 body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--page-background);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+header {
+    /* border: var(--greenBox); */
+    text-align: center;
+    width: 80%;
+    margin: 40px auto;
+}
+
+.page-title {}
+
+main {
     margin: 0;
     padding: 0;
 }
 
-header {}
-
-.page-title {}
-
-main {}
+section {
+    /* border: var(--blueBox); */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
 
 .row {}
 
 .justify-center {}
 
-.card-column {}
+.card-column {
+    border: var(--cardBorder);
+    width: var(--cardWidth);
+    height: auto;
+    margin-top: 40px;
+    position: relative;
+    padding: 20px 0;
+}
 
-.card {}
+#figure{
+    /* border: var(--blueBox);
+    background-color: lightgray; */
+}
 
-.code-card {}
+.card {
+    /* width: 70%; */
+}
 
-.card-header {}
+.code-card {
+    /* background-color: darkgray; */
+    margin: 0 20px;
+    width: auto;
 
-.card-body {}
+}
 
-.code-block {}
+.card-header {
+    border: var(--whiteBox);
+    border-radius: 5px;
+    z-index: 5;
+    margin-top: -35px;
+    background-color: var(--mainColor);
+    padding: 10px;
+    /* position: absolute; */
+    /* top: -35px; */
+    /* display: inline-block; */
+    /* width: 80%; */
+    /* width: 80%; */
+    
+
+}
+
+.card-body {
+    /* background-color: lightgray; */
+}
+
+.code-block {
+    font-family: monospace;
+    color: green;
+    white-space: pre-wrap;
+    background-color: aliceblue;
+    padding: 15px;
+}
 
 
-section {}
 
-footer {}
+
+footer {
+    text-align: center;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media only screen and (max-width: 1000px) {
+    .card-column {
+        border: var(--cardBorder);
+        width: 45%;
+        height: auto;
+        margin-top: 40px;
+        position: relative;
+        padding: 20px 0;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .card-column {
+        border: var(--cardBorder);
+        width: 90%;
+        height: auto;
+        margin-top: 40px;
+        position: relative;
+        padding: 20px 0;
+    }
+}
 
