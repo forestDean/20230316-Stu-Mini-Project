@@ -41,6 +41,7 @@ section {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    /* align-items: ; */
     flex-wrap: wrap;
 }
 
@@ -68,16 +69,19 @@ section {
 
 .code-card {
     /* background-color: darkgray; */
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    height: 100%;
     margin: 0 20px;
     width: auto;
-
 }
 
 .card-header {
     border: var(--whiteBox);
     border-radius: 5px;
     z-index: 5;
-    margin-top: -35px;
+    margin: -35px 0 0 ;
     background-color: var(--mainColor);
     padding: 10px;
     /* position: absolute; */
@@ -85,50 +89,50 @@ section {
     /* display: inline-block; */
     /* width: 80%; */
     /* width: 80%; */
-    
-
+    transition: margin-right 0.5s, color 1s;
+}
+  
+.card-header:hover {
+    margin-right: 30px;
+    color:steelblue;
 }
 
 .card-body {
     /* background-color: lightgray; */
+    /* flex-grow: 1; */
 }
 
 .code-block {
-    font-family: monospace;
+    margin-top: 0;
+    border-radius: 5px;
+    height:auto;
+    font-family: monospace; 
     color: green;
     white-space: pre-wrap;
     background-color: aliceblue;
-    padding: 15px;
+    background: linear-gradient(to top left,rgb(225, 235, 245) 10%,white 80%,rgb(225, 235, 245));
+    padding: 20px 15px;
+    user-select: all;
+    /* flex-grow: 1; */
+    flex: 1 1 auto;
 }
-
-
-
 
 footer {
     text-align: center;
+    padding: 20px 40px;
 }
 
 /* RESPONSIVE DESIGN */
 
 @media only screen and (max-width: 1000px) {
     .card-column {
-        border: var(--cardBorder);
         width: 45%;
-        height: auto;
-        margin-top: 40px;
-        position: relative;
-        padding: 20px 0;
     }
 }
 
 @media only screen and (max-width: 750px) {
     .card-column {
-        border: var(--cardBorder);
         width: 90%;
-        height: auto;
-        margin-top: 40px;
-        position: relative;
-        padding: 20px 0;
     }
 }
 
